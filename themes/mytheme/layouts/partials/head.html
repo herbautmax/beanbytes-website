@@ -1,0 +1,46 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image"/>
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ .Description }}"/>
+
+    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
+    {{ $style := resources.Get "style.css" | toCSS  $options | minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+
+    <script>
+        let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+        
+        updateMode()
+        darkModeMediaQuery.addEventListener('change', updateModeWithoutTransitions)
+        window.addEventListener('storage', updateModeWithoutTransitions)
+        
+        function updateMode() {
+          let isSystemDarkMode = darkModeMediaQuery.matches
+          let isDarkMode = window.localStorage.isDarkMode === 'true' || (!('isDarkMode' in window.localStorage) && isSystemDarkMode)
+        
+          if (isDarkMode) {
+            document.documentElement.classList.add('dark')
+          } else {
+            document.documentElement.classList.remove('dark')
+          }
+        
+          if (isDarkMode === isSystemDarkMode) {
+            delete window.localStorage.isDarkMode
+          }
+        }
+        
+        function disableTransitionsTemporarily() {
+          document.documentElement.classList.add('[&_*]:!transition-none')
+          window.setTimeout(() => {
+            document.documentElement.classList.remove('[&_*]:!transition-none')
+          }, 0)
+        }
+        
+        function updateModeWithoutTransitions() {
+          disableTransitionsTemporarily()
+          updateMode()
+        }
+     </script>
+</head>

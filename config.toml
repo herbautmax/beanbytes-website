@@ -1,0 +1,4 @@
+baseURL = 'https://beanbytes.fr'
+languageCode = 'fr'
+title = 'BeanBytes'
+theme = 'mytheme'
