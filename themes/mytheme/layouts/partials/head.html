@@ -5,8 +5,7 @@
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}"/>
 
-    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
-    {{ $style := resources.Get "style.css" | toCSS  $options | minify }}
+    {{ $style := resources.Get "style.css" | minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
 
     <script>

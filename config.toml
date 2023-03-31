@@ -2,3 +2,13 @@ baseURL = 'https://beanbytes.fr'
 languageCode = 'fr'
 title = 'BeanBytes'
 theme = 'mytheme'
+relativeURLS = true
+
+  [params]
+    author = "Maxime Herbaut"
+  
+  [frontmatter]
+    date = ["date", "publishDate", "lastmod"]
+    lastmod = ["lastmod", ":fileModTime", ":default"]
+
+sectionPagesMenu = "main"
