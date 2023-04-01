@@ -1,8 +1,8 @@
 baseURL = 'https://beanbytes.fr'
 languageCode = 'fr'
 title = 'BeanBytes'
+description = 'description' 
 theme = 'mytheme'
-relativeURLS = true
 
   [params]
     author = "Maxime Herbaut"
@@ -10,5 +10,3 @@ relativeURLS = true
   [frontmatter]
     date = ["date", "publishDate", "lastmod"]
     lastmod = ["lastmod", ":fileModTime", ":default"]
-
-sectionPagesMenu = "main"
