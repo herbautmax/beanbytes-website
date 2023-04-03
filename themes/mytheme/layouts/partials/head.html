@@ -4,7 +4,7 @@
     {{ $profile := resources.Get "images/profile.jpg" }}
     <link rel="preload" as="image" href="{{ $profile.RelPermalink }}"/>
     <title>{{ .Title }}</title>
-    <meta name="description" content="{{ .Description }}"/>
+    <meta name="description" content="{{ .Description }}"/>gt
     {{ $style := resources.Get "style.css" }}    
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
 
