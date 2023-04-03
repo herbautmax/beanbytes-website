@@ -5,7 +5,6 @@
     <link rel="preload" as="image" href="{{ $profile.RelPermalink }}"/>
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}"/>
-    npm run build-tw
     {{ $style := resources.Get "style.css" }}    
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
 
