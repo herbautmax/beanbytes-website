@@ -1,0 +1,16 @@
+baseURL = 'https://maximeherbaut.com'
+languageCode = 'fr'
+title = 'Maxime Herbaut'
+description = 'description' 
+theme = 'mytheme'
+
+  [params]
+    author = "Maxime Herbaut"
+    email = "maxime@herbaut.me"
+    github = "https://github.com/herbautmax"
+    linkedin = "https://www.linkedin.com/in/maximeherbaut/"
+    calendly = "https://calendly.com/maximeherbaut/30min"
+  
+  [frontmatter]
+    date = ["date", "publishDate", "lastmod"]
+    lastmod = ["lastmod", ":fileModTime", ":default"]
