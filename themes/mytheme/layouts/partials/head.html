@@ -1,12 +1,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image"/>
+    {{ $profile := resources.Get "images/profile.jpg" }}
+    <link rel="preload" as="image" href="{{ $profile.RelPermalink }}"/>
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}"/>
 
     {{ $style := resources.Get "style.css" | minify }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
     <script>
         let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')

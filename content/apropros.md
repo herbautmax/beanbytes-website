@@ -1,10 +1,10 @@
 ---
-title: "Aboutus"
+title: "À propos"
 draft: false
 description: ""
 menu:
   main:
     identifier: "aboutus"
-    weight: 100 
+    weight: 200
     parent: ""
 ---
