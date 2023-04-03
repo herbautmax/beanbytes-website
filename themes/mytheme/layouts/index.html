@@ -8,6 +8,7 @@
                 <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                   Je suis Maxime, product/project Manager basé à Lille. Je cherche de nouvaux défis pour créer la meilleure expérience utlisateur pour vos clients.
                </p>
+
                 <div class="mt-6 flex gap-6">
                    <a class="group -m-1 p-1" aria-label="Follow on GitHub" href="{{ site.Params.github }}">
                       <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300">
@@ -28,60 +29,74 @@
 
  <div class="mt-16 sm:mt-20">
    <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-      <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-         <img alt="" sizes="(min-width: 640px) 18rem, 11rem" src="" width="3744" height="5616" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color:transparent">
+      {{ $nepal := resources.Get "images/nepal.jpg" }}
+      {{ $photos := (slice
+         (slice "Nepal" $nepal.RelPermalink "")
+         (slice "Nepal" $nepal.RelPermalink "-")
+         (slice "Nepal" $nepal.RelPermalink "-")
+         (slice "Nepal" $nepal.RelPermalink "")
+         (slice "Nepal" $nepal.RelPermalink "")
+       )}}
+
+      {{ range $photos }} 
+      <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl {{ index . 2 }}rotate-2">
+         <img alt="{{ index . 0 }}" src="{{ index . 1 }}" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color:transparent">
       </div>
-      <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
-         <img alt="" sizes="(min-width: 640px) 18rem, 11rem" src="" width="3936" height="2624" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color:transparent">
-      </div>
-      <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-         <img alt="" sizes="(min-width: 640px) 18rem, 11rem" src="" width="5760" height="3840" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color:transparent">
-      </div>
-      <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-         <img alt="" sizes="(min-width: 640px) 18rem, 11rem" src="" width="2400" height="3000" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color:transparent">
-      </div>
-      <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
-         <img alt="" sizes="(min-width: 640px) 18rem, 11rem" src="" width="4240" height="2384" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color:transparent">
-      </div>
+      {{ end }}
    </div>
 </div>
 
 
  <div class="sm:px-8 mt-24 md:mt-28">
- 
     <div class="mx-auto max-w-7xl lg:px-8">
        <div class="relative px-4 sm:px-8 lg:px-12">
           <div class="mx-auto max-w-2xl lg:max-w-5xl">
              <div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
                 <div class="flex flex-col gap-16">
+          <div class="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
 
-                  {{ $pages := where .Site.Pages "Type" "post" }}
-                  {{ range $pages }}   
-                   <article class="group relative flex flex-col items-start">
-                      <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-                         <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                         <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span><span class="relative z-10">{{ .Title }}</span></a>
-                      </h2>
-                      <time class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" dateTime="2022-09-05"><span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true"><span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500"></span></span>September 5, 2022</time>
-                      <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.</p>
-                      <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">
-                         Read article
-                         <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
-                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                         </svg>
-                      </div>
-                   </article>
-                   {{ end}}
-                </div>
+            <h2 class="flex text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-12">
+               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-6 w-6 flex-none">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm8.975 16.383l-2.608-1.485c.403-.884.633-1.863.633-2.898s-.23-2.014-.633-2.897l2.608-1.485c.65 1.325 1.025 2.809 1.025 4.382s-.375 3.057-1.025 4.383zm-18.975-4.383c0-1.573.375-3.057 1.025-4.383l2.608 1.485c-.403.884-.633 1.863-.633 2.898s.23 2.014.633 2.897l-2.608 1.485c-.65-1.325-1.025-2.809-1.025-4.382zm5 0c0-2.757 2.243-5 5-5s5 2.243 5 5-2.243 5-5 5-5-2.243-5-5zm9.397-8.968l-1.485 2.608c-.888-.407-1.872-.64-2.912-.64s-2.024.233-2.912.64l-1.485-2.608c1.329-.654 2.818-1.032 4.397-1.032s3.068.378 4.397 1.032zm-8.794 17.936l1.485-2.608c.888.407 1.872.64 2.912.64s2.024-.233 2.912-.64l1.485 2.608c-1.329.654-2.818 1.032-4.397 1.032s-3.068-.378-4.397-1.032z" class="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"></path>
+                  <path d="M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm0-2c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm0 6c2.206 0 4 1.794 4 4s-1.794 4-4 4-4-1.794-4-4 1.794-4 4-4zm0-2c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 4c-1.105 0-2 .896-2 2s.895 2 2 2 2-.896 2-2-.895-2-2-2z" class="stroke-zinc-400 dark:stroke-zinc-500"></path>
+               </svg>
+               <span class="ml-3">Mes services</span>
+            </h2>
+            
+            <div class="md:col-span-3">
+               <ul role="list" class="space-y-10">
+
+                  {{ $services := (slice
+                     (slice "Concevoir" "Je suis en mesure de réaliser des ateliers pour concevoir le MVP/V1 de votre produit à travers un Design Sprint.")
+                     (slice "Créer" "je suis capable de créeer un MVP en no-code afin de le faire tester et recueillir des feedbacks utilisateurs pour lancer votre produit.")
+                     (slice "Développer" "Je peux également vous accompagner sur les phases de Discovery et Delivery pour votre produit.")
+                     (slice "Atteindre les objectifs" "Enfin je peux construire et organiser une équipe produit performante pour vous aider à atteindre les objectifs.")
+                   )}}
+                   {{ range $services }}   
+                  <li class="group relative flex flex-col items-start">
+                     <h3 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">{{ index . 0 }}</h3>
+                     <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">{{ index . 1 }}</p>
+                  </li>
+                  {{ end }}
+               </ul>
+               <a href="{{ $.Site.Params.calendly }}" target="_blank" class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-50 font-medium text-zinc-900 hover:bg-zinc-100 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-12 w-full">
+                  Prendre rendez-vous 
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" class="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50">
+                     <path d="m12.007 2c-5.518 0-9.998 4.48-9.998 9.998 0 5.517 4.48 9.997 9.998 9.997s9.998-4.48 9.998-9.997c0-5.518-4.48-9.998-9.998-9.998zm1.523 6.21s1.502 1.505 3.255 3.259c.147.147.22.339.22.531s-.073.383-.22.53c-1.753 1.754-3.254 3.258-3.254 3.258-.145.145-.335.217-.526.217-.192-.001-.384-.074-.531-.221-.292-.293-.294-.766-.003-1.057l1.977-1.977h-6.693c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h6.693l-1.978-1.979c-.29-.289-.287-.762.006-1.054.147-.147.339-.221.53-.222.19 0 .38.071.524.215z" fill-rule="nonzero" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </div>
 
                 <div class="space-y-10 lg:pl-16 xl:pl-24">
                    <div class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-                      <h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                      <h2 class="flex text-xl font-semibold text-zinc-900 dark:text-zinc-100">
                          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-6 w-6 flex-none">
                             <path d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z" class="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"></path>
                             <path d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5" class="stroke-zinc-400 dark:stroke-zinc-500"></path>
                          </svg>
-                         <span class="ml-3">Expérience</span>
+                         <span class="ml-3">Mes expériences</span>
                       </h2>
                       <ol class="mt-6 space-y-4">
                         {{ $artifakt := resources.Get "images/artifakt.jpeg" }}
@@ -93,7 +108,7 @@
                            (slice $artifakt.RelPermalink "Artifakt" "Product Manager" "mai 2022" "aujourd'hui")
                            (slice $tymate.RelPermalink "Tymate" "Chef de projets" "avr. 2016" "dec. 2018")
                            (slice $tymate.RelPermalink "Tymate" "Directeur de projets" "jan. 2019" "avr. 2022")
-                           (slice $freelance "Freelance" "Développeur web" "sept. 2015" "avr. 2016")
+                           (slice $freelance.RelPermalink "Freelance" "Développeur web" "sept. 2015" "avr. 2016")
                            (slice $vf.RelPermalink "Villa Finder" "Développeur web (stage)" "juin 2014" "avr. 2016")
                          )}}
 
