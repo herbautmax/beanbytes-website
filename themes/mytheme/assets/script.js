@@ -1,6 +1,8 @@
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  disableTransitionsTemporarily()
   document.documentElement.classList.add('dark')
 } else {
+  disableTransitionsTemporarily()
   document.documentElement.classList.remove('dark')
 }
 
@@ -15,7 +17,6 @@ function disableTransitionsTemporarily() {
 function toggleMode() {
   let classes = document.documentElement.classList.value.toString()
   let dark = classes.includes("dark")
-  console.log(dark)
   if (dark) {
     disableTransitionsTemporarily()
     document.documentElement.classList.remove('dark')
