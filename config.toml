@@ -3,6 +3,7 @@ languageCode = 'fr'
 title = 'Maxime Herbaut'
 description = 'description' 
 theme = 'mytheme'
+disableKinds= ["taxonomyTerm"] 
 
   [params]
     author = "Maxime Herbaut"
