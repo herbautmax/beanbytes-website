@@ -1,7 +1,7 @@
 baseURL = 'https://maximeherbaut.com'
 languageCode = 'fr'
 title = 'Maxime Herbaut'
-description = 'description' 
+description = 'Maxime Herbaut, Freelance, Product Manager.' 
 theme = 'mytheme'
 disableKinds= ["taxonomyTerm"] 
 
