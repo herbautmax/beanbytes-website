@@ -29,13 +29,17 @@
 
  <div class="mt-16 sm:mt-20">
    <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-      {{ $nepal := resources.Get "images/nepal.jpg" }}
+      {{ $nepal := resources.Get "images/nepal-color.jpg" }}
+      {{ $singapore := resources.Get "images/singapore.jpg" }}
+      {{ $talk := resources.Get "images/talk.jpg" }}
+      {{ $trek := resources.Get "images/trek.jpg" }}
+      {{ $cook := resources.Get "images/cook.jpg" }}
       {{ $photos := (slice
-         (slice "Nepal" $nepal.RelPermalink "")
-         (slice "Nepal" $nepal.RelPermalink "-")
-         (slice "Nepal" $nepal.RelPermalink "-")
-         (slice "Nepal" $nepal.RelPermalink "")
-         (slice "Nepal" $nepal.RelPermalink "")
+         (slice "Cuisine" $cook.RelPermalink "")
+         (slice "Singapour" $singapore.RelPermalink "-")
+         (slice "Trek" $trek.RelPermalink "")
+         (slice "Discours" $talk.RelPermalink "-")
+         (slice "Népal" $nepal.RelPermalink "")
        )}}
 
       {{ range $photos }} 
