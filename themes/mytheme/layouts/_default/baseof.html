@@ -19,9 +19,6 @@
               </main>
               <footer class="mt-32">
                 {{- partial "footer.html" . -}}
-
-                {{ $js := resources.Get "script.js" }}
-                <script src="{{$js.RelPermalink}}" defer></script>
               </footer>
            </div>
         </div>
