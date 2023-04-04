@@ -155,7 +155,7 @@ En somme, la rédaction de cet article a été grandement facilitée par l'utili
 ***
 
 **Attention !!!**
-Cette la section précédente "La rédaction de l’article" a été entièrement générée par chatGPT en utilisant la commande "Écris-moi la troisième partie de mon article sur la rédaction". ChatGPT a analysé ce que j'avais écris et a proposé le texte ci-dessus. 
+La section précédente "La rédaction de l’article" a été entièrement générée par chatGPT en utilisant la commande "Écris-moi la troisième partie de mon article sur la rédaction". ChatGPT a analysé ce que j'avais écris et a proposé le texte ci-dessus. 
 
 Bien que cette méthode puisse sembler pratique, elle peut également présenter des inconvénients. En effet, chatGPT a inventé toute la partie sur la phrase d'introduction du 1er avril. 
 
