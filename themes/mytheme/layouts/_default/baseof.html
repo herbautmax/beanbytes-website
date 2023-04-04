@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full antialiased" lang="{{ site.LanguageCode }}">
+<html class="h-full antialiased dark" lang="{{ site.LanguageCode }}">
     {{- partial "head.html" . -}}
 
     <body class="flex h-full flex-col bg-zinc-50 dark:bg-black">
@@ -19,9 +19,6 @@
               </main>
               <footer class="mt-32">
                 {{- partial "footer.html" . -}}
-
-                {{ $js := resources.Get "script.js" }}
-                <script src="{{$js.RelPermalink}}" defer></script>
               </footer>
            </div>
         </div>
