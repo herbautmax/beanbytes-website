@@ -12,3 +12,6 @@ menu:
     parent: "blog"
 ---
 
+ceci est un article de blog trop bien 
+
+## Test
