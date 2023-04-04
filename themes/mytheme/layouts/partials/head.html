@@ -7,40 +7,6 @@
     <meta name="description" content="{{ .Description }}"/>
     {{ $style := resources.Get "style.css" }}    
     <link rel="stylesheet" href="{{ $style.Permalink }}"> 
-
-    <script>
-        let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-        
-        updateMode()
-        darkModeMediaQuery.addEventListener('change', updateModeWithoutTransitions)
-        window.addEventListener('storage', updateModeWithoutTransitions)
-        
-        function updateMode() {
-          console.log("coucou")
-          let isSystemDarkMode = darkModeMediaQuery.matches
-          let isDarkMode = window.localStorage.isDarkMode === 'true' || (!('isDarkMode' in window.localStorage) && isSystemDarkMode)
-        
-          if (isDarkMode) {
-            document.documentElement.classList.add('dark')
-          } else {
-            document.documentElement.classList.remove('dark')
-          }
-        
-          if (isDarkMode === isSystemDarkMode) {
-            delete window.localStorage.isDarkMode
-          }
-        }
-        
-        function disableTransitionsTemporarily() {
-          document.documentElement.classList.add('[&_*]:!transition-none')
-          window.setTimeout(() => {
-            document.documentElement.classList.remove('[&_*]:!transition-none')
-          }, 0)
-        }
-        
-        function updateModeWithoutTransitions() {
-          disableTransitionsTemporarily()
-          updateMode()
-        }
-     </script>
+    {{ $js := resources.Get "script.js" }}
+    <script src="{{$js.RelPermalink}}" defer></script>
 </head>
