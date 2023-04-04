@@ -1,7 +1,7 @@
 ---
 title: "À propos"
 draft: false
-description: ""
+description: "Je suis Maxime, j'ai 30 ans et je vis à côté de Lille."
 menu:
   main:
     identifier: "aboutus"

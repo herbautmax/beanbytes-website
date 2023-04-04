@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 draft: false
-description: "ceci est une super description pourmon blod"
+description: "Articles sur le numérique et le product management."
 menu:
   main:
     identifier: "blog"
