@@ -1,5 +1,6 @@
 ---
-title: "Blog"
+linktitle: "Blog"
+title: "Blog - Maxime Herbaut"
 draft: false
 description: "Articles sur le numérique et le product management."
 menu:
