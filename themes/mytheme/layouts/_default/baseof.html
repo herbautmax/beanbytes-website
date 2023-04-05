@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html class="h-full antialiased dark" lang="{{ site.LanguageCode }}">
-    {{- partial "head.html" . -}}
+{{- partial "head.html" . -}}
 
-    <body class="flex h-full flex-col bg-zinc-50 dark:bg-black">
-        <div id="__next">
-           <div class="fixed inset-0 flex justify-center sm:px-8">
-              <div class="flex w-full max-w-7xl lg:px-8">
-                 <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
-              </div>
-           </div>
-           <div class="relative">
-              <header class="pointer-events-none relative z-50 flex flex-col" style="height:var(--header-height);margin-bottom:var(--header-mb)">
-                {{- partial "header.html" . -}}
-              </header>
-              <div style="height:var(--content-offset)"></div>
-              <main>
-                {{- block "main" . }}{{- end }}
-              </main>
-              <footer class="mt-32">
-                {{- partial "footer.html" . -}}
-              </footer>
-           </div>
-        </div>
-     </body>
+<body class="flex h-full flex-col bg-zinc-50 dark:bg-black">
+   <div id="__next">
+      <div class="fixed inset-0 flex justify-center sm:px-8">
+         <div class="flex w-full max-w-7xl lg:px-8">
+            <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+         </div>
+      </div>
+      <div class="relative">
+         <header class="pointer-events-none relative z-50 flex flex-col"
+            style="height:var(--header-height);margin-bottom:var(--header-mb)">
+            {{- partial "header.html" . -}}
+         </header>
+         <div style="height:var(--content-offset)"></div>
+         <main>
+            {{- block "main" . }}{{- end }}
+         </main>
+         <footer class="mt-32">
+            {{- partial "footer.html" . -}}
+         </footer>
+      </div>
+   </div>
+</body>
+
 </html>
