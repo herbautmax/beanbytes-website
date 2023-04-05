@@ -1,15 +1,17 @@
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {{ $profile := resources.Get "images/profile.webp" }}
-    <link rel="preload" as="image" href="{{ $profile.RelPermalink }}"/>
-    <title>{{ .Title }}</title>
-    <meta name="description" content="{{ if .IsHome }} {{ site.Params.description }} {{ else }} {{ .Description }} {{ end }}"/>
-    {{ $style := resources.Get "style.css" }}    
-    <link rel="stylesheet" href="{{ $style.Permalink }}"> 
-    {{ $js := resources.Get "script.js" }}
-    <script src="{{ $js.RelPermalink }}" defer></script>
-    {{ if eq hugo.Environment "production" }}
-      <script async src="https://analytics.umami.is/script.js" data-website-id="79134d6c-db9a-4cb9-a3a7-6f237bea593c"></script>
-    {{ end }}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ $profile := resources.Get "images/profile.webp" }}
+  <link rel="preload" as="image" href="{{ $profile.RelPermalink }}" />
+  <title>{{ .Title }}</title>
+  <meta name="description"
+    content="{{ if .IsHome }} {{ site.Params.description }} {{ else }} {{ .Description }} {{ end }}" />
+  {{ $style := resources.Get "style.css" }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{ $js := resources.Get "script.js" }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+  {{ if eq hugo.Environment "production" }}
+  <script async src="https://analytics.umami.is/script.js"
+    data-website-id="79134d6c-db9a-4cb9-a3a7-6f237bea593c"></script>
+  {{ end }}
 </head>
