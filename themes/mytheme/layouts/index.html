@@ -29,11 +29,11 @@
 
  <div class="mt-16 sm:mt-20">
    <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-      {{ $nepal := resources.Get "images/nepal-color.jpg" }}
-      {{ $singapore := resources.Get "images/singapore.jpg" }}
-      {{ $talk := resources.Get "images/talk.jpg" }}
-      {{ $trek := resources.Get "images/trek.jpg" }}
-      {{ $cook := resources.Get "images/cook.jpg" }}
+      {{ $nepal := resources.Get "images/nepal-color.webp" }}
+      {{ $singapore := resources.Get "images/singapore.webp" }}
+      {{ $talk := resources.Get "images/talk.webp" }}
+      {{ $trek := resources.Get "images/trek.webp" }}
+      {{ $cook := resources.Get "images/cook.webp" }}
       {{ $photos := (slice
          (slice "Cuisine" $cook.RelPermalink "")
          (slice "Singapour" $singapore.RelPermalink "-")
@@ -103,10 +103,10 @@
                          <span class="ml-3">Mes expériences</span>
                       </h2>
                       <ol class="mt-6 space-y-4">
-                        {{ $artifakt := resources.Get "images/artifakt.jpeg" }}
-                        {{ $tymate := resources.Get "images/tymate.jpeg" }}
-                        {{ $freelance := resources.Get "images/freelance.jpg" }}
-                        {{ $vf := resources.Get "images/villa-finder.png" }}
+                        {{ $artifakt := resources.Get "images/artifakt.webp" }}
+                        {{ $tymate := resources.Get "images/tymate.webp" }}
+                        {{ $freelance := resources.Get "images/freelance.webp" }}
+                        {{ $vf := resources.Get "images/villa-finder.webp" }}
 
                         {{ $experiences := (slice
                            (slice $artifakt.RelPermalink "Artifakt" "Product Manager" "mai 2022" "aujourd'hui")

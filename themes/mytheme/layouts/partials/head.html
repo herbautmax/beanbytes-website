@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {{ $profile := resources.Get "images/profile.jpg" }}
+    {{ $profile := resources.Get "images/profile.webp" }}
     <link rel="preload" as="image" href="{{ $profile.RelPermalink }}"/>
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}"/>
