@@ -7,6 +7,16 @@
   <meta name="description"
     content="{{ if .IsHome }} {{ site.Params.description }} {{ else }} {{ .Description }} {{ end }}" />
   {{ $style := resources.Get "style.css" }}
+
+  {{ $apple := resources.Get "favicon/apple-touch-icon.png" }}
+  {{ $favicon32 := resources.Get "favicon/favicon-32x32.png" }}
+  {{ $favicon16 := resources.Get "favicon/favicon-16x16.png" }}
+  {{ $manifest := resources.Get "favicon/site.webmanifest" }}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ $apple.RelPermalink }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32.RelPermalink }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16.RelPermalink }}">
+  <link rel="manifest" href="{{ $manifest.RelPermalink }}">
+
   <link rel="stylesheet" href="{{ $style.Permalink }}">
   {{ $js := resources.Get "script.js" }}
   <script src="{{ $js.RelPermalink }}" defer></script>
