@@ -4,6 +4,7 @@
   {{ $profile := resources.Get "images/profile.webp" }}
   <link rel="preload" as="image" href="{{ $profile.RelPermalink }}" />
   <title>{{ .Title }}</title>
+  <meta name="theme-color" content="#00272A"/>
   <meta name="description"
     content="{{ if .IsHome }} {{ site.Params.description }} {{ else }} {{ .Description }} {{ end }}" />
   {{ $style := resources.Get "style.css" }}
