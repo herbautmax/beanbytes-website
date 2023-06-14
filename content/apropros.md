@@ -1,6 +1,6 @@
 ---
 linktitle: "À propos"
-title: "À propos - Maxime Herbaut"
+title: "À propos"
 draft: false
 description: "Je suis Maxime, j'ai 30 ans et je vis à côté de Lille."
 menu:

@@ -8,7 +8,7 @@ type: "article"
 menu:
   main:
     identifier: "deploiement"
-    weight: 301
+    weight: 302
     parent: "blog"
 ---
 *Cet article avait était écrit le cadre de mon poste de Product Manager pour Artifakt, un PaaS qui permet d’automatiser l’hébergement, le déploiement et la gestion d’applications sur des infrastructures cloud.* 
