@@ -2,10 +2,10 @@ baseURL = 'https://maximeherbaut.com'
 languageCode = 'fr' 
 title = 'Maxime Herbaut'
 theme = 'mytheme'
-disableKinds= ["taxonomyTerm"] 
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
   [params]
-    description = "Maxime Herbaut, Freelance, Product Manager basé à Lille."
+    description = "Site professionnel de Maxime Herbaut, product manager / CPO freelance, basé à Lille."
     author = "Maxime Herbaut"
     email = "maxime@herbaut.me"
     github = "https://github.com/herbautmax"
