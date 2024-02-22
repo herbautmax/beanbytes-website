@@ -129,17 +129,22 @@
                         <span class="ml-3">Mes expériences</span>
                      </h2>
                      <ol class="mt-6 space-y-4">
+                        {{ $weasyn := resources.Get "images/weasyn.webp" }}
+                        {{ $sergic := resources.Get "images/sergic.webp" }}
                         {{ $artifakt := resources.Get "images/artifakt.webp" }}
                         {{ $tymate := resources.Get "images/tymate.webp" }}
                         {{ $freelance := resources.Get "images/freelance.webp" }}
                         {{ $vf := resources.Get "images/villa-finder.webp" }}
+                     
 
                         {{ $experiences := (slice
-                        (slice $artifakt.RelPermalink "Artifakt" "Product Manager" "mai 2022" "aujourd'hui")
-                        (slice $tymate.RelPermalink "Tymate" "Directeur de projets" "jan. 2019" "avr. 2022")
-                        (slice $tymate.RelPermalink "Tymate" "Chef de projets" "avr. 2016" "dec. 2018")
-                        (slice $freelance.RelPermalink "Freelance" "Développeur web" "juin. 2015" "avr. 2016")
-                        (slice $vf.RelPermalink "Villa Finder" "Développeur web (stage)" "juin 2014" "avr. 2015")
+                        (slice $weasyn.RelPermalink "Weasyn" "Associé / CPO" "sept 2023" "aujourd'hui")      
+                        (slice $sergic.RelPermalink "Sergic" "Product Manager Data et gestion locative" "jun 2023" "aujourd'hui")   
+                        (slice $artifakt.RelPermalink "Artifakt" "Product Manager" "mai 2022" "jun 2023")
+                        (slice $tymate.RelPermalink "Tymate" "Directeur de projets" "jan 2019" "avr 2022")
+                        (slice $tymate.RelPermalink "Tymate" "Chef de projets" "avr 2016" "dec 2018")
+                        (slice $freelance.RelPermalink "Freelance" "Développeur web" "jun 2015" "avr 2016")
+                        (slice $vf.RelPermalink "Villa Finder" "Développeur web (stage)" "jun 2014" "avr 2015")
                         )}}
 
                         {{ range $experiences }}
